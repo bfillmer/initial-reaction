@@ -11,7 +11,6 @@ const DEV = process.env.npm_lifecycle_event === 'dev';
 
 // Node-managed vendors for concatenating into the vendors.js file.
 const vendors = [
-  'axios',
   'classnames',
   'enroute',
   'react',

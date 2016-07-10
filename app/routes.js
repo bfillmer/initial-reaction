@@ -1,6 +1,6 @@
 
-import { Home } from 'components/Home';
-import { Blog } from 'components/Blog';
+import { Home } from 'screens/Home';
+import { Blog } from 'screens/Blog';
 
 // Map routes to the correct higher order components.
 // @NOTE: '*' must be last. Route matches against first match found.

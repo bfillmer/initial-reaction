@@ -4,24 +4,27 @@ import { navigate } from 'redux-routes';
 
 import classNames from 'classnames';
 
-export const Blog = ({
+export const Home = ({
   action,
   text,
 }) => {
-  const divClasses = classNames(['container-blog', 'container']);
+  const divClasses = classNames(['container-home', 'container']);
   const buttonClasses = classNames(['btn', 'btn-primary']);
 
   return (
     <div className = { divClasses }>
-      <h1>{ text.blogTitle }</h1>
-      <button className = { buttonClasses } onClick={() => action(navigate('/'))}>
-        Go home
+      <h1>{ text.greeting }</h1>
+      <button
+        className = { buttonClasses }
+        onClick = { () => action(navigate('/blog')) }
+      >
+        Go to the blog
       </button>
     </div>
   );
 };
 
-Blog.propTypes = {
+Home.propTypes = {
   action: PropTypes.func.isRequired,
   text: PropTypes.object.isRequired,
 };

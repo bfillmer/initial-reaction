@@ -11,7 +11,7 @@ export const store = socrates([
 
 // Boot up store.
 store({
-  type: 'boot',
+  type: 'BOOT',
   payload: {
     url: document.location.pathname,
     text: {

@@ -16,11 +16,10 @@
   "author": "Bryan Fillmer <bryan.fillmer@gmail.com> (http://github.com/bfillmer)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bfillmer/react-socrates"
+    "url": "https://github.com/bfillmer/initial-reaction"
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.11.1",
     "bootstrap": "^4.0.0-alpha.2",
     "classnames": "^2.2.5",
     "enroute": "^1.0.1",

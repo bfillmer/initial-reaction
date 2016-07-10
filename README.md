@@ -1,12 +1,13 @@
 
-# React & Socrates (Redux) Boilerplate
+# Initial Reaction
+## Basic React Boilerplate
 
 Leveraging React and Socrates-wrapped Redux for a simple to spin up front-end boilerplate.
 
 ## Quick Start
 
 ```shell
-git clone https://github.com/bfillmer/react-socrates.git
+git clone https://github.com/bfillmer/initial-reaction.git
 cd react-socrates
 npm install
 npm run dev # Point browser to: http://localhost:8080
@@ -21,7 +22,6 @@ npm run lint # eslint
 npm run reset # clean & install
 npm run clean # clear dist/ and node_modules/
 npm run update # update node_modules
-npm run test # tape unit tests [TODO]
 ```
 
 ## Development Notes
