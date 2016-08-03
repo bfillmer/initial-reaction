@@ -15,9 +15,9 @@ const vendors = [
   'enroute',
   'react',
   'react-dom',
+  'redux',
   'redux-logger',
-  'redux-routes',
-  'socrates',
+  'redux-routing',
 ];
 
 // Webpack Plugins

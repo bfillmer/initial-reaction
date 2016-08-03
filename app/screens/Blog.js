@@ -1,6 +1,6 @@
 
 import React, { PropTypes } from 'react';
-import { navigate } from 'redux-routes';
+import { navigate } from 'redux-routing';
 
 import classNames from 'classnames';
 
