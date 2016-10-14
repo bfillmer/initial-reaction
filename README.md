@@ -8,7 +8,7 @@ Leveraging React and Socrates-wrapped Redux for a simple to spin up front-end bo
 
 ```shell
 git clone https://github.com/bfillmer/initial-reaction.git
-cd react-socrates
+cd initial-reaction
 npm install
 npm run dev # Point browser to: http://localhost:8080
 ```
@@ -21,8 +21,12 @@ npm run dev # Dev server running at: http://localhost:8080
 npm run lint # eslint
 npm run reset # clean & install
 npm run clean # clear dist/ and node_modules/
-npm run update # update node_modules
 ```
+
+## Change Log
+* Swapping over to Yarn (https://yarnpkg.com). Leaving script commands as npm based for now.
+* Updated the `webpack.config.babel.js` to be a little DRY-er and better organized.
+* Swapped to Javascript Standard Style (http://standardjs.com/) from custom eslint rules.
 
 ## Development Notes
 
