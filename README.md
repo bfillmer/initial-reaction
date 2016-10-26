@@ -2,25 +2,27 @@
 # Initial Reaction
 ## Basic React Boilerplate
 
-Leveraging React and Socrates-wrapped Redux for a simple to spin up front-end boilerplate.
+React, Redux, Simple Routing, and Sagas. Handles most use cases for a small or mid-sized web application.
 
 ## Quick Start
+
+**Note**: Requires `yarn` (https://yarnpkg.com/en/docs/install) installed globally.
 
 ```shell
 git clone https://github.com/bfillmer/initial-reaction.git
 cd initial-reaction
-npm install
-npm run dev # Point browser to: http://localhost:8080
+yarn
+yarn run dev # Point browser to: http://localhost:8080
 ```
 
 ## Available Commands
 
 ```shell
-npm run build # Minimized build in dist/
-npm run dev # Dev server running at: http://localhost:8080
-npm run lint # eslint
-npm run reset # clean & install
-npm run clean # clear dist/ and node_modules/
+yarn # Installs npm dependencies.
+yarn upgrade # Clears node_modules and reinstalls.
+yarn test # Runs linting (@TODO and tape tests).
+yarn run dev # Dev server running at: http://localhost:8080
+yarn run build # Minimized build in dist/
 ```
 
 ## Change Log

@@ -1,17 +1,12 @@
 {
   "name": "initial-reaction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple and opinionated React boilerplate.",
   "scripts": {
     "build": "npm run clean-dist && webpack --config webpack.config.babel.js --colors",
     "dev": "webpack-dev-server --config webpack.config.babel.js --hot --inline --colors --history-api-fallback",
-    "lint": "standard --fix || true",
-    "reset": "npm run clean && npm install",
-    "clean": "npm run clean-npm && npm run clean-dist",
-    "update": "updtr",
     "clean-dist": "rm -rf dist",
-    "clean-npm": "rm -rf node_modules",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard --fix || true"
   },
   "author": "Bryan Fillmer <bryan.fillmer@gmail.com> (http://github.com/bfillmer)",
   "repository": {
@@ -20,15 +15,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.2",
     "classnames": "^2.2.5",
     "enroute": "^1.0.1",
     "immutable": "^3.8.1",
+    "normalize.css": "^5.0.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "redux": "^3.5.2",
-    "redux-logger": "^2.6.1",
-    "redux-routing": "^0.3.1"
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.0",
+    "redux-routing": "^0.3.1",
+    "tachyons": "^4.5.4"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
@@ -41,8 +37,6 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.17.0",
-    "node-sass": "^3.7.0",
-    "sass-loader": "^3.2.0",
     "standard": "*",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

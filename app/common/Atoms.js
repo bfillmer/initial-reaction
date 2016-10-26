@@ -1,5 +1,4 @@
 
-/**
- * Common reusuable components that are small enough in complexity and
- * lines of code to not merit their own file.
- */
+import React from 'react'
+
+export const Button = ({ text }) => (<button className='pointer dim ba br2 bg-light-blue b--dark-blue ph2 pv1'>{text}</button>)

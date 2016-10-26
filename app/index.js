@@ -2,10 +2,13 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import { store } from 'store'
-import { App } from 'App'
+import 'normalize.css/normalize.css'
+import 'tachyons'
+import 'appearance/css/root.css'
 
-import 'appearance/scss/main.scss'
+import { store } from 'state/store'
+
+import { App } from 'App'
 
 // Create app DOM node.
 const appNode = document.createElement('div')

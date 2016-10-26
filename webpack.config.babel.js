@@ -1,8 +1,8 @@
 
-import path from 'path'
-import webpack from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import { Map } from 'immutable'
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { Map } = require('immutable')
 
 const app = path.resolve(__dirname, 'app')
 const nodeModules = path.resolve(__dirname, 'node_modules')
@@ -45,8 +45,11 @@ const configParts = {
           exclude: nodeModules
         },
         {
-          test: /\.scss$/,
-          loaders: ['style', 'css', 'sass']
+          test: /\.css$/,
+          loaders: [
+            'style-loader',
+            'css-loader'
+          ]
         },
         {
           test: /\.(png|jpg|jpeg|gif)$/,
@@ -82,7 +85,8 @@ const configParts = {
       // Reference: https://www.npmjs.com/package/html-webpack-plugin
       // Create our HTML on the fly.
       new HtmlWebpackPlugin({
-        title: 'React Boilerplate'
+        title: 'React Boilerplate',
+        template: 'app/index.html'
       })
     ]
   }),

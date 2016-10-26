@@ -1,8 +1,8 @@
 
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import route from 'enroute'
 
-import { routeMap } from 'routes'
+import { routeMap } from 'state/routing'
 
 // Primary container component, sets state to the contents of the Socrates
 // store on mount and when the store changes.
@@ -25,11 +25,7 @@ export class App extends Component {
   }
 
   render () {
-    const RouteComponent = route(routeMap)(this.state.href)
+    const RouteComponent = route(routeMap)(this.state.routes.url)
     return (<RouteComponent {...this.state} />)
   }
-}
-
-App.propTypes = {
-  store: PropTypes.object.isRequired
 }
