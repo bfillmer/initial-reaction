@@ -7,5 +7,6 @@ import { Blog } from 'views/Blog'
 // Define our routes.
 export const routes = [
   route('/', () => Home),
-  route('/blog', () => Blog)
+  route('/blog', () => Blog),
+  route('/blog/:name', () => Blog)
 ]

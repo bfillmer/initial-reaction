@@ -33,6 +33,7 @@ const configParts = {
       vendors
     },
     output: {
+      publicPath: '/',
       path: path.resolve(__dirname, 'dist'),
       filename: 'app.js'
     },
@@ -92,7 +93,7 @@ const configParts = {
   // USED ONLY BY PRODUCTION BUILD
   build: Map({
     devtool: 'cheap-module-source-map',
-    publicPath: './',
+    publicPath: '/',
     plugins: [
       new webpack.DefinePlugin({
         'process.env': {
@@ -125,7 +126,8 @@ const configParts = {
     devTool: 'eval',
     publicPath: 'http://localhost:8080/',
     devServer: {
-      contentBase: './dist',
+      // contentBase: './dist',
+      historyApiFallback: true,
       stats: {
         modules: false,
         cached: false

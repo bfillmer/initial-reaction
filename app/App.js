@@ -28,8 +28,17 @@ export class App extends Component {
   }
 
   render () {
+    // Match current route.
     const routeMatch = match(this.state.location.href, routes)
+
+    // Get correct component or default to Home.
     const RouteComponent = routeMatch && routeMatch.handler() || Home
-    return (<RouteComponent {...this.state} />)
+
+    // If our route has params we'll pass that as props to the component as well.
+    const props = routeMatch && routeMatch.params
+      ? Object.assign({}, this.state, routeMatch.params)
+      : this.state
+
+    return (<RouteComponent {...props} />)
   }
 }
