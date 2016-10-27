@@ -1,13 +1,13 @@
 
+// PRESENTATIONAL
 import React from 'react'
 import { navigate } from 'redux-routing'
 
 import { Button } from 'views/Atoms'
 
-export const Blog = ({ dispatch, name }) => (
+export const Blog = ({ dispatch }) => (
   <div className='ph5'>
-    <h1 className='f4'>{ name && name || 'Blog' }</h1>
-    <Button onClick={() => dispatch(navigate('/blog/ParamTest'))}>URL Params</Button><br />
+    <h1 className='f4'>Blog</h1>
     <Button onClick={() => dispatch(navigate('/'))}>Home</Button>
   </div>
 )

@@ -1,44 +1,27 @@
 
-import React, { Component } from 'react'
+// CONTAINER
+import React from 'react'
 import { match } from 'redux-routing'
 
-// Failsafe for routes that don't match. 404.
+import { store } from 'state/store'
+import { connectWithStore } from 'state/utils'
+
 import { Home } from 'views/Home'
 
 import { routes } from 'routes'
 
-// Primary container component, sets state to the contents of the Socrates
-// store on mount and when the store changes.
-export class App extends Component {
-  componentWillMount () {
-    const getState = this.props.store.getState
+const mapStateToProps = (state) => ({
+  href: state.location.href
+})
 
-    // Map redux dispatch as state.dispatch.
-    this.setState({
-      dispatch: this.props.store.dispatch
-    })
+const View = ({ dispatch, href }) => {
+  // Match current route.
+  const routeMatch = match(href, routes)
 
-    // Map store data to state. Don't assume there is a boot state.
-    if (typeof getState() !== 'undefined') {
-      this.setState(getState())
-    }
+  // Get correct component or default to Home.
+  const RouteComponent = routeMatch && routeMatch.handler() || Home
 
-    // Subscribe to store changes.
-    this.props.store.subscribe(() => this.setState(getState()))
-  }
-
-  render () {
-    // Match current route.
-    const routeMatch = match(this.state.location.href, routes)
-
-    // Get correct component or default to Home.
-    const RouteComponent = routeMatch && routeMatch.handler() || Home
-
-    // If our route has params we'll pass that as props to the component as well.
-    const props = routeMatch && routeMatch.params
-      ? Object.assign({}, this.state, routeMatch.params)
-      : this.state
-
-    return (<RouteComponent {...props} />)
-  }
+  return <RouteComponent dispatch={dispatch} />
 }
+
+export const App = connectWithStore(store, View, mapStateToProps)

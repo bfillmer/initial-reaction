@@ -20,6 +20,6 @@ store.dispatch(navigate(window.location.href))
 
 // Render our application.
 render(
-  <App store={store} />,
+  <App />,
   appNode
 )
