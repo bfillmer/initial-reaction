@@ -14,7 +14,6 @@ const vendors = [
   'react',
   'react-dom',
   'redux',
-  'redux-logger',
   'redux-routing'
 ]
 
@@ -86,7 +85,7 @@ const configParts = {
       // Create our HTML on the fly.
       new HtmlWebpackPlugin({
         title: 'React Boilerplate',
-        template: 'app/index.html'
+        template: 'app/index.tpl.html'
       })
     ]
   }),

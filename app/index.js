@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { render } from 'react-dom'
+import { navigate } from 'redux-routing'
 
 import 'normalize.css/normalize.css'
 import 'tachyons'
@@ -14,6 +15,8 @@ import { App } from 'App'
 const appNode = document.createElement('div')
 appNode.id = 'app'
 document.body.appendChild(appNode)
+
+store.dispatch(navigate(window.location.href))
 
 // Render our application.
 render(

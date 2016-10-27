@@ -17,13 +17,12 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "enroute": "^1.0.1",
-    "immutable": "^3.8.1",
     "normalize.css": "^5.0.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "redux": "^3.6.0",
-    "redux-logger": "^2.7.0",
     "redux-routing": "^0.3.1",
+    "redux-saga": "^0.12.0",
     "tachyons": "^4.5.4"
   },
   "devDependencies": {
@@ -37,6 +36,7 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.17.0",
+    "immutable": "^3.8.1",
     "standard": "*",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

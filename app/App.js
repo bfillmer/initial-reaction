@@ -1,8 +1,11 @@
 
 import React, { Component } from 'react'
-import route from 'enroute'
+import { match } from 'redux-routing'
 
-import { routeMap } from 'state/routing'
+// Failsafe for routes that don't match. 404.
+import { Home } from 'screens/Home'
+
+import { routes } from 'routes'
 
 // Primary container component, sets state to the contents of the Socrates
 // store on mount and when the store changes.
@@ -10,9 +13,9 @@ export class App extends Component {
   componentWillMount () {
     const getState = this.props.store.getState
 
-    // Map redux dispatch as state.action.
+    // Map redux dispatch as state.dispatch.
     this.setState({
-      action: this.props.store.dispatch
+      dispatch: this.props.store.dispatch
     })
 
     // Map store data to state. Don't assume there is a boot state.
@@ -25,7 +28,8 @@ export class App extends Component {
   }
 
   render () {
-    const RouteComponent = route(routeMap)(this.state.routes.url)
+    const routeMatch = match(this.state.location.href, routes)
+    const RouteComponent = routeMatch && routeMatch.handler() || Home
     return (<RouteComponent {...this.state} />)
   }
 }
