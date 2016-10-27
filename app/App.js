@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { match } from 'redux-routing'
 
 // Failsafe for routes that don't match. 404.
-import { Home } from 'screens/Home'
+import { Home } from 'views/Home'
 
 import { routes } from 'routes'
 

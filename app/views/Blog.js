@@ -2,7 +2,7 @@
 import React from 'react'
 import { navigate } from 'redux-routing'
 
-import { Button } from 'common/Atoms'
+import { Button } from 'views/Atoms'
 
 export const Blog = ({ dispatch }) => {
   return (

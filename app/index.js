@@ -5,7 +5,7 @@ import { navigate } from 'redux-routing'
 
 import 'normalize.css/normalize.css'
 import 'tachyons'
-import 'appearance/css/root.css'
+import 'assets/css/root.css'
 
 import { store } from 'state/store'
 
