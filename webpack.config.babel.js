@@ -10,11 +10,11 @@ const nodeModules = path.resolve(__dirname, 'node_modules')
 // Vendors for concatenating into the vendors.js file.
 const vendors = [
   'classnames',
-  'enroute',
   'react',
   'react-dom',
   'redux',
-  'redux-routing'
+  'redux-routing',
+  'redux-saga'
 ]
 
 const configParts = {
