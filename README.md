@@ -20,7 +20,7 @@ yarn run dev # Point browser to: http://localhost:8080
 ```shell
 yarn # Installs npm dependencies.
 yarn upgrade # Clears node_modules and reinstalls.
-yarn test # Runs linting (@TODO and tape tests).
+yarn test # Lint.
 yarn run dev # Dev server running at: http://localhost:8080
 yarn run build # Minimized build in dist/
 ```
