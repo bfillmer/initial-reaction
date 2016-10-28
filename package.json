@@ -1,12 +1,13 @@
 {
   "name": "initial-reaction",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple and opinionated React boilerplate.",
   "scripts": {
     "build": "npm run clean-dist && webpack --config webpack.config.babel.js --colors",
-    "dev": "webpack-dev-server --config webpack.config.babel.js --hot --inline --colors --history-api-fallback",
     "clean-dist": "rm -rf dist",
-    "test": "standard --fix && babel-tape-runner ./app/**/*.test.js | faucet || true"
+    "dev": "webpack-dev-server --config webpack.config.babel.js --hot --inline --colors --history-api-fallback",
+    "lint": "standard --fix || true",
+    "test": "babel-tape-runner ./app/**/*.test.js | faucet || true"
   },
   "author": "Bryan Fillmer <bryan.fillmer@gmail.com> (http://github.com/bfillmer)",
   "repository": {

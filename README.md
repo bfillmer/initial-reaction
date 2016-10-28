@@ -20,12 +20,14 @@ yarn run dev # Point browser to: http://localhost:8080
 ```shell
 yarn # Installs npm dependencies.
 yarn upgrade # Clears node_modules and reinstalls.
-yarn test # Lint.
+yarn test # tape test against any *.test.js file.
+yarn run lint # standard --fix
 yarn run dev # Dev server running at: http://localhost:8080
 yarn run build # Minimized build in dist/
 ```
 
 ## Change Log
+* Added tape (https://github.com/substack/tape) and testing template.
 * Using all of redux-routing (https://github.com/callum/redux-routing) to simplify routing.
 * Swapped to tachyons (http://tachyons.io/) and away from SASS in general.
 * Swapping over to Yarn (https://yarnpkg.com). Leaving script commands as npm based for now.
