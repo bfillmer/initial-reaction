@@ -6,7 +6,7 @@
     "build": "npm run clean-dist && webpack --config webpack.config.babel.js --colors",
     "dev": "webpack-dev-server --config webpack.config.babel.js --hot --inline --colors --history-api-fallback",
     "clean-dist": "rm -rf dist",
-    "test": "standard --fix || true"
+    "test": "standard --fix && babel-tape-runner ./app/**/*.test.js | faucet || true"
   },
   "author": "Bryan Fillmer <bryan.fillmer@gmail.com> (http://github.com/bfillmer)",
   "repository": {
@@ -33,6 +33,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "faucet": "^0.0.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.17.0",
     "immutable": "^3.8.1",
