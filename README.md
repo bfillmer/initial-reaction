@@ -27,10 +27,12 @@ yarn run build # Minimized build in dist/
 ```
 
 ## Change Log
+* Streamlined connecting to Redux, gave in to using `<Provider>` and context.
+* Cleaned up the build process, removed unnecessary Immutable library.
 * Added tape (https://github.com/substack/tape) and testing template.
 * Using all of redux-routing (https://github.com/callum/redux-routing) to simplify routing.
 * Swapped to tachyons (http://tachyons.io/) and away from SASS in general.
-* Swapping over to Yarn (https://yarnpkg.com). Leaving script commands as npm based for now.
+* Swapping over to Yarn (https://yarnpkg.com).
 * Updated the `webpack.config.babel.js` to be a little DRY-er and better organized.
 * Swapped to Javascript Standard Style (http://standardjs.com/) from custom eslint rules.
 

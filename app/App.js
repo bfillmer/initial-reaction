@@ -2,9 +2,9 @@
 // CONTAINER
 import React from 'react'
 import { match } from 'redux-routing'
+import { Provider, connect } from 'react-redux'
 
 import { store } from 'state/store'
-import { connectWithStore } from 'state/utils'
 
 import { Home } from 'views/Home'
 
@@ -14,14 +14,20 @@ const mapStateToProps = (state) => ({
   href: state.location.href
 })
 
-const View = ({ dispatch, href }) => {
+const Container = ({ dispatch, href }) => {
   // Match current route.
   const routeMatch = match(href, routes)
 
   // Get correct component or default to Home.
   const RouteComponent = routeMatch && routeMatch.handler() || Home
 
-  return <RouteComponent dispatch={dispatch} />
+  return <RouteComponent />
 }
 
-export const App = connectWithStore(store, View, mapStateToProps)
+const RouteComponent = connect(mapStateToProps)(Container)
+
+export const App = () => (
+  <Provider store={store}>
+    <RouteComponent />
+  </Provider>
+)
